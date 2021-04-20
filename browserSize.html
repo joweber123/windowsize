@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Window Resize Event</title>
+</head>
+<style>
+    body{
+        margin: 0;;
+    }
+    #result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        font-size: 40px;
+    }
+</style>
+<body>
+<div id="result"></div>
+
+<script>        
+// Defining event listener function
+function displayWindowSize(){
+    // Get width and height of the window excluding scrollbars
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    
+    // Display result inside a div element
+    document.getElementById("result").innerHTML = "W: " + w + "px - " + "H: " + h + "px";
+}
+    
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", displayWindowSize);
+
+// Calling the function for the first time
+displayWindowSize();
+</script>
+</body>
+</html>
